@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.rokiba.udacityshoestore.ui.home.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.rokiba.udacityshoestore.ui.home.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.rokiba.udacityshoestore.ui.home.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        tools:layout="@layout/fragment_login"
+        android:id="@+id/loginFragment"
+        android:name="com.rokiba.udacityshoestore.ui.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_welcome"
+        android:id="@+id/welcomeFragment"
+        android:name="com.rokiba.udacityshoestore.ui.welcome.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_instructions"
+        android:id="@+id/instructionsFragment"
+        android:name="com.rokiba.udacityshoestore.ui.instructions.InstructionsFragment"
+        android:label="InstructionsFragment" >
+        <action
+            android:id="@+id/action_instructionsFragment_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_listing"
+        android:id="@+id/listingFragment"
+        android:name="com.rokiba.udacityshoestore.ui.listing.ListingFragment"
+        android:label="ListingFragment" >
+        <action
+            android:id="@+id/action_listingFragment_to_detailsScreenFragment"
+            app:destination="@id/detailsScreenFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_details_screen"
+        android:id="@+id/detailsScreenFragment"
+        android:name="com.rokiba.udacityshoestore.ui.DetailsScreenFragment"
+        android:label="DetailsScreenFragment" />
+
+</navigation>
